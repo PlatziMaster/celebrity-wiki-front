@@ -1,0 +1,11 @@
+// Reset some global properties
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// Set font size to 1rem === 10px
+html {
+  font-size: 62.5%;
+}
