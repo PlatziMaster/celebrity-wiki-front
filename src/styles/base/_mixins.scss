@@ -1,0 +1,8 @@
+@import './variables';
+
+@mixin headline4 {
+    font-family: $font-jost;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 19px;
+}

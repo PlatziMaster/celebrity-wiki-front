@@ -1,0 +1,7 @@
+@import '../base/mixins';
+
+.search{
+    &__paragraph{
+        @include headline4;
+    }
+}
