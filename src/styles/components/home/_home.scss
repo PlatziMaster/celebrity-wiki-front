@@ -1,7 +1,7 @@
 @import "/src/styles/base/mixins";
 @import "/src/styles/base/variables";
 
-@media (max-width: 375px) {
+@media (max-width: 874px) {
   .search {
     @include flex;
     &__paragraph {
@@ -52,7 +52,7 @@
   }
 
   .card {
-    width: 325px;
+    width: 285px;
     margin-top: 15px;
     height: 137px;
     background: #F1B67D;
