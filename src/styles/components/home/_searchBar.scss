@@ -1,7 +1,21 @@
-@import '../base/mixins';
+@import '/src/styles/base/mixins';
+@import '/src/styles/base/variables';
 
 .search{
     &__paragraph{
         @include headline4;
     }
+    &__group{
+        &__icon{
+            width: 23px;
+        }
+        &__input{
+            width: 307px;
+            height: 43px;
+            background: #F3F5F7;
+            border-radius: 15px;
+            border: 0;
+        }
+    }
+    
 }

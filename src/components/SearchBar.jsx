@@ -6,8 +6,11 @@ const SearchBar =() =>{
    return(
     <section className="search">
         <p className="search__paragraph">Find your favorite Celebrity</p>
-        <img src={searchIcon} className="search__icon" alt="Icon Search Celebrity"></img>
-        <input type="text" className="search__input"/>
+
+        <div className="search__group">
+            <img src={searchIcon} className="search__group__icon" alt="Icon Search Celebrity"></img>
+            <input type="text" className="search__group__input"/>
+        </div>
     </section>
    )
 }
