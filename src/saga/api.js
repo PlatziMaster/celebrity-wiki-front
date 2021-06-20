@@ -1,12 +1,31 @@
-// Create fetch API function
+/**
+ * @function apiCall
+ * @param {string} url
+ * @param {string} method
+ * @param {JSON} raw
+ * @returns {promise} - Promise from fetch request
+ */
 export default function apiCall(url, method, raw) {
-  // Add error variable
+  /** 
+   * @let - Variable for set response status code.
+   * @type {number} 
+   */
   let error;
-  // Get token from local storage
+
+  /** 
+   * @constant - Token for set in request data and got from local storage.
+   * @type {string} 
+   */
   const token = "Bearer " + window.localStorage.getItem('People-News-Token');
 
-  // Set request data
-  let requestData = {
+  /** 
+   * @constant - Add options for fetch request.
+   * @type {object}
+   *  @property {string} method - HTTP method 
+   *  @property {JSON} body - Payload 
+   *  @property {object} headers - Headers
+   */
+  const requestData = {
     method: method,
     body: raw,
     headers: {

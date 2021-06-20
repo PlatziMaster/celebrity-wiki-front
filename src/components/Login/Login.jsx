@@ -13,9 +13,9 @@ export const Login = () => {
   /**
    * @typedef alertMessage
    * @type {object}
-   * @property {string} message - Message to display.
-   * @property {string} type - Type of message ['success', 'info', 'warning', 'error'].
-   * @property {number} show - Defines if AlertMessage should displayed.
+   *  @property {string} message - Message to display.
+   *  @property {string} type - Type of message ['success', 'info', 'warning', 'error'].
+   *  @property {number} show - Defines if AlertMessage should displayed.
    */
   const [alertMessage, setAlertMessage] = useState({
     message: '',
@@ -26,8 +26,8 @@ export const Login = () => {
   /**
    * @typedef loginState
    * @type {object}
-   * @property {string} email - User email.
-   * @property {string} password - User password.
+   *  @property {string} email - User email.
+   *  @property {string} password - User password.
    */
   const [loginState, setLoginState] = useState({
     email: '',
