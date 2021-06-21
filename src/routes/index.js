@@ -4,8 +4,9 @@ import { BrowserRouter, Switch, Redirect } from 'react-router-dom';
 import { PrivateRoute } from './PrivateRoute';
 import { PublicRoute } from './PublicRoute';
 // Import views
-import { LoginView } from '../views/Login/Login';
+// import { LoginView } from '../views/Login/Login';
 import { LandingView } from '../views/Landing/Landing';
+import { Celebrityview } from '../views/Celebrity/Celebrity';
 // Import components
 // --- Here import the components like header and footer ---
 
@@ -14,7 +15,7 @@ export const Routes = () => (
     <main>
       <Switch>
         <PrivateRoute exact path="/" component={LandingView}/>
-        <PublicRoute exact path="/login" component={LoginView}/>
+        <PublicRoute exact path="/login" component={Celebrityview}/>
         <Redirect to="/" />
       </Switch>
     </main>

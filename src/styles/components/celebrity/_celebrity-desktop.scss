@@ -1,0 +1,19 @@
+.celebrity {
+  padding: 0;
+}
+.celebrity__content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 350px 1fr;
+}
+.celebrity__content figure {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.celebrity__content figure img {
+  border-radius: 50%;
+}
+.celebrity__content--date {
+  display: none;
+}

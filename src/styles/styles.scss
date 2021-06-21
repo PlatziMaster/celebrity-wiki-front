@@ -3,10 +3,11 @@
 @import "./base/base";
 
 // Import components
-@import './components/home/home';
-@import './components/login/login';
+@import "./components/home/home";
+@import "./components/login/login";
+@import "./components/celebrity/celebrity";
 
 // IMport desktop queries
 @media (min-width: 1024px) {
-  @import './components/styles-desktop';
+  @import "./components/styles-desktop";
 }
