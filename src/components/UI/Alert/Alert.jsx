@@ -1,9 +1,9 @@
 export const Alert = ({ type, message, toggleAlert }) => (
-  <div class={`alert alert--${type}`}>
+  <div className={`alert alert--${type}`}>
+    {message}
     <span
-      class="alert__close-button" 
+      className="alert__close-button" 
       onClick={() => toggleAlert()}
     >&times;</span>
-    {message}
   </div>
 )

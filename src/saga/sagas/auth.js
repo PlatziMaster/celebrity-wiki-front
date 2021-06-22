@@ -15,7 +15,7 @@ import apiCall from '../api';
  * @constant - Base url from api.
  * @type {string} 
  */
-const baseURL = `https://url`;
+const baseURL = `https://people-new.herokuapp.com`;
 
 /**
  * @function {request funcion}
@@ -38,7 +38,7 @@ export function * loginRequest({ payload }) {
      * @constant - Fetch request with call function call(fetch function, url, HTTP method, data parsed with json stringify).
      * @type {promise} 
      */
-    const result = yield call(apiCall, `${baseURL}/login`, 'POST', JSON.stringify(data));
+    const result = yield call(apiCall, `${baseURL}/auth/login`, 'POST', JSON.stringify(data));
     
     // Do success redux action
     yield put({ type: SUCCESS_LOGIN, result });

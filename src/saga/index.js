@@ -7,6 +7,6 @@ import authSaga from './sagas/auth';
 // Add watchers
 export default function * rootSaga() {
   yield all([
-    authSaga
+    authSaga()
   ]);
 }

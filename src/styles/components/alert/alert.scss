@@ -2,6 +2,11 @@
   padding: 20px; /* Red */
   color: white;
   margin-bottom: 15px;
+  font-size: 1.7rem;
+  max-width: 274px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   &--success {
     background-color: #04AA6D;

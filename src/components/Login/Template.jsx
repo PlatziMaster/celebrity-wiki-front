@@ -8,6 +8,7 @@ import EmailIcon from '../../assets/svgs/email.svg';
 import PadlockIcon from '../../assets/svgs/padlock.svg';
 
 export const Template = ({
+  login,
   state, 
   handlerInputs,
   isLoading,
@@ -64,7 +65,8 @@ export const Template = ({
         <button 
           className="login__button" 
           type="button"
-          disabled={!state.password || !state.email}
+          onClick={() => login(state)}
+          disabled={!state.password || !state.email || isLoading}
         >
           {isLoading ? <Spinner /> : 'sign in'}
         </button>

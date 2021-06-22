@@ -1,3 +1,3 @@
 export const Spinner = () => (
-  <div class="spinner"><div></div><div></div><div></div><div></div></div>
+  <div className="spinner"><div></div><div></div><div></div><div></div></div>
 )
