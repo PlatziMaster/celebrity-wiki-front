@@ -1,29 +1,86 @@
 @import "/src/styles/base/mixins";
 @import "/src/styles/base/variables";
 
-@media (max-width: 874px) {
-  .search {
-    @include flex;
-    &__paragraph {
-      @include headline4;
+
+
+.search {
+  @include flex;
+  &__paragraph {
+    @include headline4;
+  }
+  &__group {
+    &__icon {
+      position: absolute;
+      width: 23px;
+      margin-top: 10px;
+      margin-left: 10px;
     }
-    &__group {
-      &__icon {
-        position: absolute;
-        width: 23px;
-        margin-top: 10px;
-        margin-left: 10px;
-      }
-      &__input {
-        width: 307px;
-        height: 43px;
-        background: #f3f5f7;
-        border-radius: 15px;
-        border: 0;
-      }
+    &__input {
+      width: 307px;
+      height: 43px;
+      background: #f3f5f7;
+      border-radius: 15px;
+      border: 0;
     }
   }
+}
 
+
+
+.cards {
+  @include flex;
+}
+
+.card {
+  width: 285px;
+  margin-top: 15px;
+  height: 137px;
+  background: #F1B67D;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  border-radius: 5px;
+  display: grid;
+  grid-template-areas:
+      "header article article2"
+      "header article article2"
+      "header footer footer";
+  grid-template-rows: 90px 1fr 58px;
+  grid-template-columns: 1fr 46% 12%;
+  grid-row-gap: 10px;
+  grid-column-gap: 7px;
+  
+
+  #title{
+      grid-area: article;
+  }
+
+  #btnSave{
+      grid-area:article2;
+  }
+
+  #header{
+      grid-area: header;
+  }
+
+  #footer{
+      grid-area: footer;
+  }
+
+  &__title {
+    @include headline4;
+    color: $white;
+  }
+  &__reads {
+      @include body;
+      color: $black;
+      font-size: 14px;
+  }
+  &__btnSave{
+      margin-top: 4px;
+  }
+}
+
+@media (max-width: 1024px) {
+  
   .menu {
     @include flex;
     margin-top: 20px;
@@ -37,7 +94,7 @@
       flex-direction: row;
       justify-content: center;
       align-items: center;
-
+  
       p {
         @include body;
         margin-left: 5px;
@@ -46,56 +103,5 @@
       }
     }
   }
-
-  .cards {
-    @include flex;
-  }
-
-  .card {
-    width: 285px;
-    margin-top: 15px;
-    height: 137px;
-    background: #F1B67D;
-    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-    border-radius: 5px;
-    display: grid;
-    grid-template-areas:
-        "header article article2"
-        "header article article2"
-        "header footer footer";
-    grid-template-rows: 90px 1fr 58px;
-    grid-template-columns: 1fr 49% 10%;
-    grid-row-gap: 10px;
-    grid-column-gap: 7px;
-    
-
-    #title{
-        grid-area: article;
-    }
-
-    #btnSave{
-        grid-area:article2;
-    }
-
-    #header{
-        grid-area: header;
-    }
-
-    #footer{
-        grid-area: footer;
-    }
-
-    &__title {
-      @include headline4;
-      color: $white;
-    }
-    &__reads {
-        @include body;
-        color: $black;
-        font-size: 14px;
-    }
-    &__btnSave{
-        margin-top: 4px;
-    }
-  }
+  
 }

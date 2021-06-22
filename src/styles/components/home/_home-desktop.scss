@@ -1,0 +1,29 @@
+@import "/src/styles/base/mixins";
+@import "/src/styles/base/variables";
+
+@media (min-width: 1024px) {
+    .header{
+        
+        justify-content: space-around;
+        padding: 20px;
+    }
+
+    .menu{
+        display: flex;
+        &__icon{
+            display: none;
+        }
+
+        p {
+            @include body;
+            margin-left: 10px;
+            font-size: 19px;
+            color: $gray2;
+          }
+    }
+
+    .cards{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
