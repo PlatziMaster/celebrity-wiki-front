@@ -5,7 +5,23 @@
   padding: 0;
 }
 
-// Set font size to 1rem === 10px
 html {
+  // Set font size to 1rem === 10px
   font-size: 62.5%;
+  font-family: $font-jost;
+}
+
+// Reset button styles
+button {
+  border: none;
+}
+
+// Reset input styles
+input {
+  border: none;
+  background-color: transparent;
+
+  &:focus-visible {
+    outline: none;
+  }
 }
