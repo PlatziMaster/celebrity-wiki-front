@@ -74,6 +74,12 @@ export default function apiCall(url, method, raw) {
           case 400:
             const error_400 = { message: res.error };
             throw error_400;
+          case 401:
+            const error_401 = { message: res.error.message };
+            throw error_401;
+          case 403:
+            const error_403 = { message: res.error };
+            throw error_403;
           case 500:
             const error_500 = { message: res.error };
             throw error_500;
