@@ -1,5 +1,5 @@
 import React from "react";
-import SaveBtn from '../assets/svgs/save-new.svg'
+import SaveBtn from '../../assets/svgs/save-new.svg'
 
 const Card = ({image, title, reads, author}) =>{
     return(

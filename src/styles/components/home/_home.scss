@@ -77,6 +77,12 @@
   &__btnSave{
       margin-top: 4px;
   }
+
+  &__image {
+    width: 132px;
+    height: 110px;
+    object-fit: cover;
+  }
 }
 
 @media (max-width: 1024px) {
