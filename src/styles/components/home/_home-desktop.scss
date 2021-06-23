@@ -16,16 +16,20 @@
             display: none;
         }
 
-        p {
+        a {
             @include body;
             margin-left: 10px;
             font-size: 19px;
             color: $gray2;
+            text-decoration: none;
           }
     }
 
+
+
     .cards{
-        flex-direction: row;
-        justify-content: space-around;
+       display: grid;
+       grid-template-columns: 25% 25% 25% 25%;
+       padding: 10px;
     }
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import SaveBtn from '../../assets/svgs/save-new.svg'
 
-const Card = ({image, title, reads, author}) =>{
+const Card = ({ image, title, reads, author}) =>{
     return(
         <article className="card">
             <img src={image} alt="celebrity" className="card__image" id="header"></img>

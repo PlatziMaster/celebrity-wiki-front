@@ -7,7 +7,7 @@ import Logo from "../../assets/images/logo.png";
 const Header = () =>{
     return (
         <section className="header">
-            <img src={Logo} alt="Logo People news"></img>
+            <a href="/"><img src={Logo} alt="Logo People news"></img></a>
             <SearchBar></SearchBar>
             <Menu></Menu>
         </section>
