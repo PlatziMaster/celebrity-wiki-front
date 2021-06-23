@@ -1,3 +1,6 @@
+// Import component
+import { Login } from '../../components/Login/Login';
+
 export const LoginView = () => (
-  <h1>Login</h1>
+  <Login />
 )
