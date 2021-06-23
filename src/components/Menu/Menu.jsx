@@ -9,15 +9,18 @@ const Menu=() =>{
         <section className="menu">
             <div className="menu__item">
                 <img src={NewsGreen} alt="Icon Celebrity news" className="menu__icon"/>
-                <p>Celebrity</p>
+                <a href="/">Celebrity</a>
             </div>
             <div className="menu__item">
                 <img src={Trends} alt="Icon Trends"  className="menu__icon"></img>
-                <p>Trends</p>
+                <a href="/">Trends</a>
             </div>
             <div className="menu__item">
                 <img src={Categories} alt="Icon Categories" className="menu__icon"></img>
-                <p>Categories</p>
+                <a href="/">Categories</a>
+            </div>
+            <div className="menu__item">
+                <a href="/">Logout</a>
             </div>
 
         </section>

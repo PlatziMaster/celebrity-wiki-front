@@ -24,8 +24,11 @@
           }
     }
 
+
+
     .cards{
-        flex-direction: row;
-        justify-content: space-around;
+       display: grid;
+       grid-template-columns: 25% 25% 25% 25%;
+       padding: 10px;
     }
 }
