@@ -3,6 +3,7 @@
 @import "./base/base";
 
 // Import components
+@import "./components/celebrity/celebrity";
 @import './components/alert/alert';
 @import './components/spinner/spinner';
 @import './components/home/home';
@@ -10,7 +11,7 @@
 
 // Import desktop queries
 @media (min-width: 1024px) {
-  @import './components/styles-desktop';
+  @import "./components/styles-desktop";
 }
 
 // Import tablet queries
