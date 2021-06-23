@@ -2,7 +2,7 @@ import React from "react";
 import SearchBar from "../components/SearchBar";
 import Menu from "../components/Menu";
 
-import Logo from "../assets/images/Logo.png";
+import Logo from "../assets/images/logo.png";
 
 const Header = () =>{
     return (
