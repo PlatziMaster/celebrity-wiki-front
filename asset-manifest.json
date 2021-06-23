@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ad3a5964.chunk.css",
+    "main.js": "/static/js/main.81a0797c.chunk.js",
+    "main.js.map": "/static/js/main.81a0797c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.69cf62cd.js",
+    "runtime-main.js.map": "/static/js/runtime-main.69cf62cd.js.map",
+    "static/js/2.8250fe0c.chunk.js": "/static/js/2.8250fe0c.chunk.js",
+    "static/js/2.8250fe0c.chunk.js.map": "/static/js/2.8250fe0c.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.ad3a5964.chunk.css.map": "/static/css/main.ad3a5964.chunk.css.map",
+    "static/js/2.8250fe0c.chunk.js.LICENSE.txt": "/static/js/2.8250fe0c.chunk.js.LICENSE.txt",
+    "static/media/categories.177d48de.svg": "/static/media/categories.177d48de.svg",
+    "static/media/email.376e875c.svg": "/static/media/email.376e875c.svg",
+    "static/media/facebook.5c76b0dd.svg": "/static/media/facebook.5c76b0dd.svg",
+    "static/media/google.fcc1f47d.svg": "/static/media/google.fcc1f47d.svg",
+    "static/media/styles.scss": "/static/media/login-background-tablet.7ada9348.png",
+    "static/media/news-green.c0afe1ed.svg": "/static/media/news-green.c0afe1ed.svg",
+    "static/media/padlock.ff52f055.svg": "/static/media/padlock.ff52f055.svg",
+    "static/media/save-new.e29870d0.svg": "/static/media/save-new.e29870d0.svg",
+    "static/media/search.8dbdd343.svg": "/static/media/search.8dbdd343.svg",
+    "static/media/trends.e28a27e2.svg": "/static/media/trends.e28a27e2.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.69cf62cd.js",
+    "static/js/2.8250fe0c.chunk.js",
+    "static/css/main.ad3a5964.chunk.css",
+    "static/js/main.81a0797c.chunk.js"
+  ]
+}
