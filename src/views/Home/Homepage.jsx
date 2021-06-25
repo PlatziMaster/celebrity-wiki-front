@@ -1,15 +1,14 @@
+// Import libraries
 import React from 'react';
-import Card from "../../components/Card/Card";
+// Import components
 import Header from "../../components/Header/Header";
-import data from '../../celebrities.json';
+import { Home } from '../../components/Home/Home';
 
 export const HomepageView = () => (
-    <main className="main">
-      <Header></Header>
-      <section className="cards">
-        {data.map(celebrity => (
-          <Card key={celebrity.id} image={celebrity.image} title={celebrity.name} reads={celebrity.age} author="Mary Walton"></Card>
-        ))}
-      </section>
-    </main>
+  <main className="main">
+    <Header></Header>
+    <section className="cards">
+      <Home />
+    </section>
+  </main>
 )
