@@ -14,3 +14,6 @@ export const ERROR_GOOGLE_LOGIN = 'ERROR_GOOGLE_LOGIN';
 export const RESPONSE_FACEBOOK_LOGIN = 'RESPONSE_FACEBOOK_LOGIN';
 
 export const LOGOUT = 'LOGOUT';
+
+// Celebrities
+export const SET_CELEBRITIES = 'SET_CELEBRITIES';
