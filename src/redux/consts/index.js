@@ -17,3 +17,4 @@ export const LOGOUT = 'LOGOUT';
 
 // Celebrities
 export const SET_CELEBRITIES = 'SET_CELEBRITIES';
+export const SET_FILTER_CELEBRITIES = 'SET_FILTER_CELEBRITIES';

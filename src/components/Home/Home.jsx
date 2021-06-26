@@ -3,22 +3,26 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 // Import components
 import Card from "../../components/Card/Card";
-// Import mock data
-import data from '../../celebrities.json';
+// Import custom hooks
+import { useGetCelebrities } from '../../customHooks/useGetCelebrities';
 // Import actions
-import { setCelebrities } from '../../redux/actions/celebritiesActions';
+import { setCelebrities, setFilterCelebrities } from '../../redux/actions/celebritiesActions';
 
-export const Component = ({ celebrities, setCelebrities }) => {
+export const Component = ({ celebritiesFilter, setCelebrities, setFilterCelebrities }) => {
+  // Get celebrities data from custom hook
+  const { celebrities } = useGetCelebrities();
+
   // Set celebrities data from mock data
   useEffect(() => {
-    setCelebrities(data);
-  }, [setCelebrities])
+    setCelebrities(celebrities);
+    setFilterCelebrities(celebrities);
+  }, [setCelebrities, setFilterCelebrities, celebrities])
   
   return (
-    celebrities.map(celebrity => (
+    celebritiesFilter.map(celebrity => (
       <Card 
-        key={celebrity.id} 
-        image={celebrity.image} 
+        key={celebrity._id} 
+        image={celebrity.Image} 
         title={celebrity.name} 
         reads={celebrity.age} 
         author="Mary Walton"
@@ -31,12 +35,15 @@ export const Component = ({ celebrities, setCelebrities }) => {
 const mapDispatchToProps = dispatch => ({
   setCelebrities(celebrities) {
     dispatch(setCelebrities(celebrities))
-  }
+  },
+  setFilterCelebrities(celebrities) {
+    dispatch(setFilterCelebrities(celebrities))
+  },
 });
 
 // Map state from global state to component props
 const mapStateToProps = state => ({
-  celebrities: state.celebritiesReducer.celebrities,
+  celebritiesFilter: state.celebritiesReducer.celebritiesFilter,
 });
 
 // Connect component with Redux
