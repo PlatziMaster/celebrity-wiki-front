@@ -1,6 +1,7 @@
 // Import actions constant
 import {
-  SET_CELEBRITIES
+  SET_CELEBRITIES,
+  SET_FILTER_CELEBRITIES
 } from '../consts';
 
 /**
@@ -13,5 +14,10 @@ import {
 
 export const setCelebrities = payload => ({
   type: SET_CELEBRITIES,
+  payload
+});
+
+export const setFilterCelebrities = payload => ({
+  type: SET_FILTER_CELEBRITIES,
   payload
 });

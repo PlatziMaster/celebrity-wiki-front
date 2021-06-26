@@ -3,12 +3,10 @@ import React, { useState } from "react";
 import { connect } from 'react-redux';
 // Import icons
 import searchIcon from "../../../assets/svgs/search.svg";
-// Import mock data
-import data from '../../../celebrities.json';
 // Import actions
-import { setCelebrities } from '../../../redux/actions/celebritiesActions';
+import { setFilterCelebrities } from '../../../redux/actions/celebritiesActions';
 
-const Component = ({ setCelebrities }) => {
+const Component = ({ celebrities, setFilterCelebrities }) => {
   /** 
    * @constant - Value of word that was typing from user.
    * @type {string} 
@@ -22,7 +20,7 @@ const Component = ({ setCelebrities }) => {
    */
   const filterCelebrities = (newFilterWord) => {
     setFilterWord(newFilterWord);
-    setCelebrities(data.filter(celebrity => {
+    setFilterCelebrities(celebrities.filter(celebrity => {
       const celebrityName = celebrity.name.toLowerCase();
       return celebrityName.includes(newFilterWord.toLocaleLowerCase());
     }))
@@ -47,10 +45,15 @@ const Component = ({ setCelebrities }) => {
 
 // Map Redux actions with dispatch funcion to component props
 const mapDispatchToProps = dispatch => ({
-  setCelebrities(celebrities) {
-    dispatch(setCelebrities(celebrities))
+  setFilterCelebrities(celebrities) {
+    dispatch(setFilterCelebrities(celebrities))
   }
 });
 
+// Map state from global state to component props
+const mapStateToProps = state => ({
+  celebrities: state.celebritiesReducer.celebrities,
+});
+
 // Connect component with Redux
-export const SearchBar = connect(null, mapDispatchToProps)(Component);
+export const SearchBar = connect(mapStateToProps, mapDispatchToProps)(Component);

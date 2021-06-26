@@ -1,6 +1,7 @@
 // Import actions constant
 import {
-  SET_CELEBRITIES
+  SET_CELEBRITIES,
+  SET_FILTER_CELEBRITIES
 } from '../consts';
 
 /** 
@@ -8,7 +9,8 @@ import {
  * @type {object} 
  */
 const initialState = {
-  celebrities: []
+  celebrities: [],
+  celebritiesFilter: []
 };
 
 /**
@@ -28,6 +30,14 @@ export const celebritiesReducer = (state = initialState, action) => {
       return { 
         ...state,
         celebrities: action.payload
+      };
+    case SET_FILTER_CELEBRITIES:
+      /**
+       * @returns {object} - Set new filter celebrity list
+       */
+      return { 
+        ...state,
+        celebritiesFilter: action.payload
       };
     default:
       return { ...state };
