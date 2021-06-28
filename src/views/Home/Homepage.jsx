@@ -1,18 +1,17 @@
+// Import libraries
 import React from 'react';
-import Card from "../../components/Card/Card";
+// Import components
 import Header from "../../components/Header/Header";
-import data from '../../celebrities.json';
+import { Home } from '../../components/Home/Home';
 
 import Carousel from '../../components/UI/Carousel/Carousel';
 
 export const HomepageView = () => (
-    <main className="main">
-      <Header></Header>
-      <Carousel></Carousel>
-      <section className="cards">
-        {data.map(celebrity => (
-          <Card key={celebrity.id} image={celebrity.image} title={celebrity.name}></Card>
-        ))}
-      </section>
-    </main>
+  <main className="main">
+    <Header></Header>
+    <Carousel></Carousel>
+    <section className="cards">
+      <Home />
+    </section>
+  </main>
 )

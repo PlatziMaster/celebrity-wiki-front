@@ -9,6 +9,8 @@
     @include headline4;
   }
   &__group {
+    width: 307px;
+
     &__icon {
       position: absolute;
       width: 23px;
@@ -16,7 +18,9 @@
       margin-left: 10px;
     }
     &__input {
-      width: 307px;
+      width: 100%;
+      padding-left: 40px;
+      padding-right: 20px;
       height: 43px;
       background: #f3f5f7;
       border-radius: 15px;

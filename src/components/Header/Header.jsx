@@ -1,6 +1,6 @@
 import React from "react";
-import SearchBar from "../UI/SearchBar/SearchBar";
-import Menu from "../Menu/Menu";
+import { SearchBar } from "../UI/SearchBar/SearchBar";
+import { Menu } from "../Menu/Menu";
 
 import Logo from "../../assets/images/logo.png";
 
