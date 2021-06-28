@@ -2,6 +2,7 @@
 @import "/src/styles/base/variables";
 
 @media (min-width: 1024px) {
+
     .header{
         
         display: grid;
@@ -23,6 +24,23 @@
             color: $gray2;
             text-decoration: none;
           }
+    }
+
+    .homeCard{
+        display: flex;
+    
+        &__info-title{
+            @include headline1;
+        }
+    
+        &__info-bio{
+            @include body;
+            font-size: 18px;
+        }
+    
+        &__img{
+            width: 550px;
+        }
     }
 
 

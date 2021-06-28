@@ -83,5 +83,15 @@
   .cards {
     @include flex;
   }
+
+  .homeCard{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+
+    &__img{
+      width: 328px;
+    }
+  }
   
 }

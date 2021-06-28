@@ -24,8 +24,6 @@ export const Component = ({ celebritiesFilter, setCelebrities, setFilterCelebrit
         key={celebrity._id} 
         image={celebrity.Image} 
         title={celebrity.name} 
-        reads={celebrity.age} 
-        author="Mary Walton"
       ></Card>
     ))
   )

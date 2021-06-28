@@ -11,7 +11,7 @@ export const Component = ({ logout }) => (
   <section className="menu">
     <div className="menu__item">
       <img src={NewsGreen} alt="Icon Celebrity news" className="menu__icon"/>
-      <a href="/">Celebrity</a>
+      <a href="/">Celebrities</a>
     </div>
     <div className="menu__item">
       <img src={Categories} alt="Icon Categories" className="menu__icon"></img>

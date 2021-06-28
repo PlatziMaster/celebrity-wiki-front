@@ -18,6 +18,12 @@
     font-size: 19px;
 }
 
+@mixin headline1 {
+    @include font;
+    font-weight: 600;
+    font-size: 35px;
+}
+
 @mixin body{
     @include font;
     font-weight: 400;

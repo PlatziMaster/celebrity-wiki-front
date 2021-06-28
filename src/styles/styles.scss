@@ -10,6 +10,7 @@
 @import './components/login/login';
 @import './components/slider/slider.scss';
 
+
 // Import desktop queries
 @media (min-width: 1024px) {
   @import "./components/styles-desktop";
