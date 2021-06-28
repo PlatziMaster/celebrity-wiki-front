@@ -25,65 +25,29 @@
   }
 }
 
-
-
-
-
 .card {
-  width: 285px;
+    width: 300px;
+    height: 200px;
     margin-top: 12px;
-    height: 125px;
     padding: 5px;
-    background: #F1B67D;
     border-radius: 5px;
-    display: grid;
-    grid-template-areas:
-        "header article article2"
-        "header article article2"
-        "header footer footer";
-    grid-template-rows: 80px 1fr 32px;
-    grid-template-columns: 1fr 37% 12%;
-    grid-row-gap: 10px;
-    grid-column-gap: 7px;
-  
+    position: relative;
 
-  #title{
-      grid-area: article;
-  }
+  &__footer{
+    background: rgb(93 89 86 / 49%);
+    border-radius: 2px;
+    margin-left: -5px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 
-  #btnSave{
-      grid-area:article2;
-  }
-
-  #header{
-      grid-area: header;
-  }
-
-  #footer{
-      grid-area: footer;
-  }
-
-  &__title {
-    @include headline4;
-    color: $white;
-  }
-  &__reads {
-      @include body;
-      color: $black;
-      font-size: 14px;
-      margin-top: -6px;
-  }
-  &__btnSave{
-      margin-top: 4px;
-  }
-
-  &__image {
-    width: 132px;
-    height: 110px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-top: 3px;
-  }
+    &__title {
+      @include headline4;
+      color: $white;
+      margin-left: 8px;
+    }
+  }  
+   
 }
 
 @media (max-width: 1024px) {
