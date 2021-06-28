@@ -2,6 +2,7 @@
 @import "/src/styles/base/variables";
 
 @media (min-width: 1024px) {
+
     .header{
         
         display: grid;
@@ -25,11 +26,29 @@
           }
     }
 
+    .homeCard{
+        display: flex;
+    
+        &__info-title{
+            @include headline1;
+        }
+    
+        &__info-bio{
+            @include body;
+            font-size: 18px;
+        }
+    
+        &__img{
+            width: 550px;
+        }
+    }
+
 
 
     .cards{
        display: grid;
        grid-template-columns: 25% 25% 25% 25%;
-       padding: 10px;
+       padding: 20px;
+       column-gap: 6px;
     }
 }
