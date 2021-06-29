@@ -67,6 +67,8 @@ You can check out the figma design in the link below:
 The backend managment and development is in a separate repository
 please click in the link below to consult.
 
+[Backend repository](https://github.com/AbejaCruz/people-new-backend "Backend repository")
+
 ## 📰 How to use
 To clone and run this application, you'll need [Git](https://git-scm.com) and Yarn  installed on your computer. From your command line:
 
