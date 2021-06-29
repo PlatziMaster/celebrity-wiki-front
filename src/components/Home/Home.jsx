@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 // Import components
 import Card from "../../components/Card/Card";
+import { HomeCard } from "../../components/UI/HomeCard/HomeCard";
 // Import custom hooks
 import { useGetCelebrities } from '../../customHooks/useGetCelebrities';
 // Import actions
@@ -17,15 +18,21 @@ export const Component = ({ celebritiesFilter, setCelebrities, setFilterCelebrit
     setCelebrities(celebrities);
     setFilterCelebrities(celebrities);
   }, [setCelebrities, setFilterCelebrities, celebrities])
-  
+
   return (
-    celebritiesFilter.map(celebrity => (
-      <Card 
-        key={celebrity._id} 
-        image={celebrity.Image} 
-        title={celebrity.name} 
-      ></Card>
-    ))
+    <>
+      {celebritiesFilter.length > 0 && <HomeCard celebrity={celebritiesFilter[0]}/>}
+      <section className="cards">
+        {celebritiesFilter.length > 1 && celebritiesFilter.slice(1, celebritiesFilter.length - 1).map(celebrity => (
+          <Card 
+            key={celebrity._id}
+            id={celebrity._id} 
+            image={celebrity.Image} 
+            title={celebrity.name} 
+          ></Card>
+        ))}
+      </section>
+    </>
   )
 }
 

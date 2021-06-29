@@ -1,11 +1,10 @@
 import React from 'react';
-import "../../styles/styles.scss";
-import { Template } from '../../components/Celebrity/Template';
+import { Celebrity } from '../../components/Celebrity/Celebrity';
 import Header from "../../components/Header/Header";
 
 export const Celebrityview = () => (
   <>
     <Header />
-    <Template />
+    <Celebrity />
   </>
 );
