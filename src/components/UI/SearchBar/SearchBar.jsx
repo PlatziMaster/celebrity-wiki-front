@@ -28,7 +28,7 @@ const Component = ({ celebrities, setFilterCelebrities }) => {
 
   return(
     <section className="search">
-      <p className="search__paragraph">Find your favorite Celebrity</p>
+      <label className="search__paragraph">Find your favorite Celebrity</label>
 
       <div className="search__group">
         <img src={searchIcon} className="search__group__icon" alt="Icon Search Celebrity"></img>

@@ -1,11 +1,15 @@
-.celebrity__content figure {
-  max-height: 400px;
-  overflow: hidden;
+.celebrity {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  padding: 0;
+  text-align: start;
 }
-.celebrity__content h2 {
-  font-size: 2.1rem;
-  padding: 8px;
+.celebrity-image {
+  padding: 20px;
 }
-.celebrity__content--text {
-  font-size: 1.8rem;
+.celebrity-desc > h2 {
+  text-align: center;
+}
+.celebrity-desc ul {
+  grid-template-columns: 1fr;
 }

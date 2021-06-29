@@ -1,23 +1,21 @@
 import React from 'react';
 
-export const Template = ({ celebrity }) => (
+export const Template = ({ celebrity, loading })  => (
   <div className="celebrity">
-    <div className="celebrity-header">
-      {/* header */}
-    </div>
-    <div className="celebrity__content">
-      <figure>
-        <img src={celebrity.Image} alt={celebrity.name} />
-      </figure>
-      <div className="celebrity__text">
-        <h2>
-          {celebrity.name}<p></p>
-        </h2>
-        <p className="celebrity__content--date">05/07/2003</p>
-        <p className="celebrity__content--text">
-          {celebrity.bio}
-        </p>
-      </div>
+    <figure className="celebrity-image">
+    {console.log(celebrity)}
+      <img src={celebrity.Image} alt="celebrity image" />
+    </figure>
+    <div className="celebrity-desc">
+      <h2>{celebrity.name}</h2>
+      <ul className="celebrity-desc__dates">
+        <li><b>Age: </b>{celebrity.age}</li>
+        <li><b>Height: </b>{celebrity.height}</li>
+        <li disabled={loading == true}><b>Ocupation: </b>{celebrity.occupation}</li>
+        {console.log(celebrity.occupation)}
+        <li><b>Nationality: </b>{celebrity.nationality}</li>
+      </ul>
+      <p className="celebrity-desc--bio">{celebrity.bio}</p>
     </div>
   </div>
 )
