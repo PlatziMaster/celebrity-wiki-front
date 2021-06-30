@@ -68,7 +68,7 @@ export const Template = ({
           onClick={() => login(state)}
           disabled={!state.password || !state.email || isLoading}
         >
-          {isLoading ? <Spinner /> : 'sign in'}
+          {isLoading ? <Spinner classStyle="spinner-white" /> : 'sign in'}
         </button>
 
       </form>
