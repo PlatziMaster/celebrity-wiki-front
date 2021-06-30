@@ -1,7 +1,9 @@
 .artist {
   display: grid;
   grid-template-columns: 35% 50%;
+  width: 100%;
   padding: 0px;
+  grid-gap: 20px;
 }
 .artist figure {
   padding: 20px;
@@ -11,8 +13,8 @@
   grid-gap: 10px;
 }
 .album-container {
-  max-height: 400px;
+  max-height: 350px;
 }
 .album-card {
-  max-width: 50%;
+  max-width: 70%;
 }

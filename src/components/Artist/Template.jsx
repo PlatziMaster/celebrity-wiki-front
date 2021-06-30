@@ -6,7 +6,7 @@ export const Template = ({ artist, loading }) => (
       <img src={artist.Image} alt="nothing" />
     </figure>
     <div className="artist-info">
-      <h2 className="artist--name">{artist.name}</h2>
+      <h2 className="artist--name">{artist.Artist_name}</h2>
       <ul className="artist-info__songs">
         <li><b>Saddest song: </b>{artist.Analysis.Saddest.song_name}</li>
         <li><b>Happiest song: </b>{artist.Analysis.Happiest.song_name}</li>
@@ -20,8 +20,8 @@ export const Template = ({ artist, loading }) => (
               {/* <p>{artist}</p> */}
             </div>
             <div>
-              <p>{album.Total_duration_in_minutes}</p>
-              <p>{album.Total_tracks}</p>
+              <p>{album.Total_duration_in_minutes} minutes</p>
+              <p>{album.Total_tracks} tracks</p>
             </div>
           </div>
         ))}
