@@ -1,3 +1,8 @@
-export const Spinner = () => (
-  <div className="spinner"><div></div><div></div><div></div><div></div></div>
+export const Spinner = ({classStyle}) => (
+  <div className="spinner">
+    <div className={classStyle}></div>
+    <div className={classStyle}></div>
+    <div className={classStyle}></div>
+    <div className={classStyle}></div>
+  </div>
 )

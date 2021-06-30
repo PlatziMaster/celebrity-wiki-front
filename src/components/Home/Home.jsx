@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 // Import components
 import Card from "../../components/Card/Card";
 import { HomeCard } from "../../components/UI/HomeCard/HomeCard";
+import { Spinner }  from "../UI/Spinner/Spinner";
 // Import custom hooks
 import { useGetCelebrities } from '../../customHooks/useGetCelebrities';
 // Import actions
@@ -11,7 +12,10 @@ import { setCelebrities, setFilterCelebrities } from '../../redux/actions/celebr
 
 export const Component = ({ celebritiesFilter, setCelebrities, setFilterCelebrities }) => {
   // Get celebrities data from custom hook
-  const { celebrities } = useGetCelebrities();
+  const { celebrities, isLoaded } = useGetCelebrities();
+
+  console.log(celebrities);
+  console.log(isLoaded);
   // Set celebrities data from api data
   useEffect(() => {
     setCelebrities(celebrities);
@@ -20,9 +24,15 @@ export const Component = ({ celebritiesFilter, setCelebrities, setFilterCelebrit
 
   return (
     <>
+      {!isLoaded ? 
+      <div className="container-spinner">
+        <Spinner classStyle="spinner-orange"/>
+      </div> : ""}
       {celebritiesFilter.length > 0 && <HomeCard celebrity={celebritiesFilter[0]}/>}
       <section className="cards">
+      
         {celebritiesFilter.length > 1 && celebritiesFilter.slice(1, celebritiesFilter.length - 1).map(celebrity => (
+          
           <Card 
             key={celebrity._id}
             id={celebrity._id} 

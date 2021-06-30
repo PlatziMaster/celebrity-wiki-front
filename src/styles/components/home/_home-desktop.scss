@@ -30,10 +30,12 @@
         }
 
         &__select {
+            @include body;
             font-size: 19px;
             color: $gray2;
             height: 100%;
             text-align-last:center;
+            background-color: $white;
         }
     }
 

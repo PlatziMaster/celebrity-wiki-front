@@ -7,16 +7,24 @@ import { GET_ALL_CELEBRITIES } from '../graphql/queries';
 export const useGetCelebrities = () => {
   // State for celebrities list
   const [celebrities, setCelebrities] = useState([]);
+  const [isLoaded, setIsLoaded] = useState(false);
   // Get data from graphQL query
-  const { loading, error, data } = useQuery(GET_ALL_CELEBRITIES);
+  const { error, data } = useQuery(GET_ALL_CELEBRITIES);
 
   // Set celebrities result in celebrities list
   useEffect(() => {
-    if (data) {
-      setCelebrities(data.getCelebrities);
+
+    async function loadData(){
+      if (data) {
+        setIsLoaded(true);
+        await setCelebrities(data.getCelebrities);
+      }
     }
+
+    loadData();
+    
   }, [data]);
 
   // Return data
-  return { celebrities, loading, error };
+  return { celebrities, isLoaded, error };
 };

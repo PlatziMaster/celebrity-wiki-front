@@ -1,7 +1,12 @@
 @import "/src/styles/base/mixins";
 @import "/src/styles/base/variables";
 
-
+.container-spinner{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 80px;
+}
 
 .search {
   @include flex;
