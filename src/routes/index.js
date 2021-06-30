@@ -7,6 +7,7 @@ import { PublicRoute } from './PublicRoute';
 import { LoginView } from '../views/Login/Login';
 import { Celebrityview } from '../views/Celebrity/Celebrity';
 import { HomepageView} from '../views/Home/Homepage';
+import { Artistview } from '../views/Artist/Artist';
 // Import components
 // --- Here import the components like header and footer ---
 
@@ -17,6 +18,7 @@ export const Routes = () => (
         <PublicRoute exact path="/login" component={LoginView} />
         <PrivateRoute exact path="/" component={HomepageView} />
         <PrivateRoute exact path="/celebrity/:id" component={Celebrityview} />
+        <PrivateRoute exact path="/artist/:id" component={Artistview} />
         <Redirect to="/" />
       </Switch>
     </main>
