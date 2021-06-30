@@ -1,0 +1,18 @@
+.artist {
+  display: grid;
+  grid-template-columns: 35% 50%;
+  padding: 0px;
+}
+.artist figure {
+  padding: 20px;
+}
+.artist-info__songs {
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+}
+.album-container {
+  max-height: 400px;
+}
+.album-card {
+  max-width: 50%;
+}
