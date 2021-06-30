@@ -5,7 +5,8 @@
 }
 .celebrity-image {
   width: 100%;
-  max-height: 400px;
+  max-height: 450px;
+  object-fit: cover;
 }
 .celebrity-desc > h2 {
   font-size: 2.4rem;
