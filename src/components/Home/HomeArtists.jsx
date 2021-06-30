@@ -25,7 +25,8 @@ export const Component = ({ celebritiesFilter, setCelebrities, setFilterCelebrit
             key={celebrity._id}
             id={celebrity._id} 
             image={celebrity.Image} 
-            title={celebrity.name} 
+            title={celebrity.name}
+            type={'artists'}
           ></Card>
         ))}
       </section>

@@ -14,10 +14,10 @@ export const Template = ({ artist, loading }) => (
       </ul>
       <div className="album-container">
         {artist.Albums_and_songs.map(album => (
-          <div className="album-card">
+          <div className="album-card" key={album.Id}>
             <div>
               <p>{album.Album_name}</p>
-              <p>{artist}</p>
+              {/* <p>{artist}</p> */}
             </div>
             <div>
               <p>{album.Total_duration_in_minutes}</p>

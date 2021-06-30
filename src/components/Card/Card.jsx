@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
-const Card = ({ id, image, title }) =>{
+const Card = ({ id, image, title, type }) =>{
     return(
-        <Link to={`/celebrity/${id}`}>
+        <Link to={type === 'celebrity' ? `/celebrity/${id}` : `/artist/${id}`}>
             <article className="card"
             style={{ 
                 backgroundImage: `url(${image})`,

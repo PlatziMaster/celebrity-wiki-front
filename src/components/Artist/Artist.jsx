@@ -10,6 +10,10 @@ export const Artist = () => {
   const params = useParams();
   // Get celebrity data from custom hook
   const { artist } = useGetArtistById(params.id);
+
+  if (Object.keys(artist).length === 0) {
+    return null
+  }
   
   return (
     <Template artist={artist}/>

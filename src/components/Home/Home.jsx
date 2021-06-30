@@ -14,8 +14,6 @@ export const Component = ({ celebritiesFilter, setCelebrities, setFilterCelebrit
   // Get celebrities data from custom hook
   const { celebrities, isLoaded } = useGetCelebrities();
 
-  console.log(celebrities);
-  console.log(isLoaded);
   // Set celebrities data from api data
   useEffect(() => {
     setCelebrities(celebrities);
@@ -38,6 +36,7 @@ export const Component = ({ celebritiesFilter, setCelebrities, setFilterCelebrit
             id={celebrity._id} 
             image={celebrity.Image} 
             title={celebrity.name} 
+            type={'celebrity'}
           ></Card>
         ))}
       </section>
