@@ -3,26 +3,24 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 // Import components
 import Card from "../../components/Card/Card";
-import { HomeCard } from "../../components/UI/HomeCard/HomeCard";
 // Import custom hooks
-import { useGetCelebrities } from '../../customHooks/useGetCelebrities';
+import { useGetArtists } from '../../customHooks/useGetArtists';
 // Import actions
 import { setCelebrities, setFilterCelebrities } from '../../redux/actions/celebritiesActions';
 
 export const Component = ({ celebritiesFilter, setCelebrities, setFilterCelebrities }) => {
   // Get celebrities data from custom hook
-  const { celebrities } = useGetCelebrities();
+  const { artists } = useGetArtists();
   // Set celebrities data from api data
   useEffect(() => {
-    setCelebrities(celebrities);
-    setFilterCelebrities(celebrities);
-  }, [setCelebrities, setFilterCelebrities, celebrities])
+    setCelebrities(artists);
+    setFilterCelebrities(artists);
+  }, [setCelebrities, setFilterCelebrities, artists])
 
   return (
     <>
-      {celebritiesFilter.length > 0 && <HomeCard celebrity={celebritiesFilter[0]}/>}
       <section className="cards">
-        {celebritiesFilter.length > 1 && celebritiesFilter.slice(1, celebritiesFilter.length - 1).map(celebrity => (
+        {celebritiesFilter.map(celebrity => (
           <Card 
             key={celebrity._id}
             id={celebrity._id} 
@@ -51,4 +49,4 @@ const mapStateToProps = state => ({
 });
 
 // Connect component with Redux
-export const Home = connect(mapStateToProps, mapDispatchToProps)(Component);
+export const HomeArtists = connect(mapStateToProps, mapDispatchToProps)(Component);

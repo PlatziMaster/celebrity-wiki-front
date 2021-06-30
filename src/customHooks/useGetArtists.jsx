@@ -13,7 +13,7 @@ export const useGetArtists = () => {
   // Set artists result in artists list
   useEffect(() => {
     if (data) {
-      setArtists(data.getArtists);
+      setArtists(data.getArtists.map(artist => ({ ...artist, name: artist.Artist_name })));
     }
   }, [data]);
 
