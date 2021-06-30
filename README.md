@@ -30,6 +30,8 @@ Click in the link below to go:
 
 
 **Data:**
+
+**Celebrity**
 - name
 - age
 - height
@@ -37,6 +39,16 @@ Click in the link below to go:
 - nationality
 - bio
 - Image
+
+**Artist**
+- name
+- albums
+- image
+- total albums
+- happiest song
+- saddest song
+- total tracks
+- total duration in minutes
 
 
 
@@ -49,11 +61,12 @@ You can check out the figma design in the link below:
 
 [![Login](https://i.ibb.co/dPjCcsH/login.png "Login")](https://i.ibb.co/dPjCcsH/login.png "Login")
 
-[![Home Mobile](https://i.ibb.co/gTx983y/home-mobile.png "Home Mobile")](https://i.ibb.co/gTx983y/home-mobile.png "Home Mobile")
+[![Home Desktop](https://i.ibb.co/LQvTMnD/home-desktop.png "Home Desktop")](https://i.ibb.co/LQvTMnD/home-desktop.png "Home Desktop")
 
-[![Home Desktop](https://i.ibb.co/k92GpH1/home-desktop.png "Home Desktop")](https://i.ibb.co/k92GpH1/home-desktop.png "Home Desktop")
+[![Detail desktop](https://i.ibb.co/thqWH6V/detail-desktop.png "Detail desktop")](https://i.ibb.co/thqWH6V/detail-desktop.png "Detail desktop")
 
-[![Detail desktop](https://i.ibb.co/FxhQznX/detail-desktop.png "Detail desktop")](https://i.ibb.co/FxhQznX/detail-desktop.png "Detail desktop")
+[![Home Mobile](https://i.ibb.co/B6rT0td/home-mobile.png "Home Mobile")](https://i.ibb.co/B6rT0td/home-mobile.png "Home Mobile")
+[![Detail Mobile](https://i.ibb.co/PCVMTXL/detail-mobile.png "Detail Mobile")](https://i.ibb.co/PCVMTXL/detail-mobile.png "Detail Mobile")
 
 ## 📰 Key Features
 - Login with facebook and google account
