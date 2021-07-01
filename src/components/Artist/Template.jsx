@@ -2,8 +2,8 @@ import React from "react";
 
 export const Template = ({ artist, loading }) => (
   <div className="artist">
-    <figure>
-      <img src={artist.Image} alt="nothing" />
+    <figure className="artist-image">
+      <img src={artist.Image} alt={artist.Artist_name} />
     </figure>
     <div className="artist-info">
       <h2 className="artist--name">{artist.Artist_name}</h2>
@@ -27,7 +27,6 @@ export const Template = ({ artist, loading }) => (
           <div className="album-card" key={album.Id}>
             <div>
               <p>{album.Album_name}</p>
-              {/* <p>{artist}</p> */}
             </div>
             <div>
               <p>{album.Total_duration_in_minutes} minutes</p>
