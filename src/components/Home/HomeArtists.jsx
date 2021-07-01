@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 // Import components
 import Card from "../../components/Card/Card";
+import { Spinner }  from "../UI/Spinner/Spinner";
 // Import custom hooks
 import { useGetArtists } from '../../customHooks/useGetArtists';
 // Import actions
@@ -10,12 +11,20 @@ import { setCelebrities, setFilterCelebrities } from '../../redux/actions/celebr
 
 export const Component = ({ celebritiesFilter, setCelebrities, setFilterCelebrities }) => {
   // Get celebrities data from custom hook
-  const { artists } = useGetArtists();
+  const { artists, loading } = useGetArtists();
   // Set celebrities data from api data
   useEffect(() => {
     setCelebrities(artists);
     setFilterCelebrities(artists);
   }, [setCelebrities, setFilterCelebrities, artists])
+
+  if (loading) {
+    return (
+      <div className="container-spinner">
+        <Spinner classStyle="spinner-orange"/>
+      </div>
+    )
+  }
 
   return (
     <>

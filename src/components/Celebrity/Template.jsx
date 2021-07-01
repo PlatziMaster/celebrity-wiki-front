@@ -10,7 +10,11 @@ export const Template = ({ celebrity, loading })  => (
       <ul className="celebrity-desc__dates">
         <li><b>Age: </b>{celebrity.age}</li>
         <li><b>Height: </b>{celebrity.height}</li>
-        <li><b>Ocupation: </b>{celebrity.occupation}</li>
+        <li><b>Ocupation: </b>
+          {celebrity.occupation.map(occupation => (
+            occupation + ", "
+          ))}
+        </li>
         <li><b>Nationality: </b>{celebrity.nationality}</li>
       </ul>
       <p className="celebrity-desc--bio">{celebrity.bio}</p>
