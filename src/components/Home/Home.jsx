@@ -3,7 +3,6 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 // Import components
 import Card from "../../components/Card/Card";
-import { HomeCard } from "../../components/UI/HomeCard/HomeCard";
 import { Spinner }  from "../UI/Spinner/Spinner";
 // Import custom hooks
 import { useGetCelebrities } from '../../customHooks/useGetCelebrities';
@@ -12,7 +11,7 @@ import { setCelebrities, setFilterCelebrities } from '../../redux/actions/celebr
 
 export const Component = ({ celebritiesFilter, setCelebrities, setFilterCelebrities }) => {
   // Get celebrities data from custom hook
-  const { celebrities, isLoaded } = useGetCelebrities();
+  const { celebrities, loading } = useGetCelebrities();
 
   // Set celebrities data from api data
   useEffect(() => {
@@ -20,27 +19,26 @@ export const Component = ({ celebritiesFilter, setCelebrities, setFilterCelebrit
     setFilterCelebrities(celebrities);
   }, [setCelebrities, setFilterCelebrities, celebrities])
 
-  return (
-    <>
-      {!isLoaded ? 
+  if (loading) {
+    return (
       <div className="container-spinner">
         <Spinner classStyle="spinner-orange"/>
-      </div> : ""}
-      {celebritiesFilter.length > 0 && <HomeCard celebrity={celebritiesFilter[0]}/>}
-      <section className="cards">
-      
-        {celebritiesFilter.length > 1 && celebritiesFilter.slice(1, celebritiesFilter.length - 1).map(celebrity => (
-          
-          <Card 
-            key={celebrity._id}
-            id={celebrity._id} 
-            image={celebrity.Image} 
-            title={celebrity.name} 
-            type={'celebrity'}
-          ></Card>
-        ))}
-      </section>
-    </>
+      </div>
+    )
+  }
+
+  return (
+    <section className="cards">
+      {celebritiesFilter.map(celebrity => (
+        <Card 
+          key={celebrity._id}
+          id={celebrity._id} 
+          image={celebrity.Image} 
+          title={celebrity.name} 
+          type={'celebrity'}
+        ></Card>
+      ))}
+    </section>
   )
 }
 
