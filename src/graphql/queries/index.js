@@ -6,11 +6,6 @@ export const GET_ALL_CELEBRITIES = gql`
     getCelebrities {
       _id
       name
-      age
-      height
-      occupation
-      nationality
-      bio
       Image
     }
   }
@@ -21,8 +16,11 @@ export const GET_CELEBRITY_BY_ID = gql`
     getCelebritie(id: $id) {
       _id
       name
+      gender
       age
       height
+      birthday
+      net_worth
       occupation
       nationality
       bio
@@ -36,16 +34,6 @@ export const GET_ALL_ARTISTS = gql`
     getArtists {
       _id
       Artist_name
-      Albums_and_songs {
-        Id
-        Tracks_ids {
-          id
-          song_name
-        }
-        Album_name
-        Total_tracks
-        Total_duration_in_minutes
-      }
       Image
       Analysis {
         Happiest {
@@ -55,7 +43,6 @@ export const GET_ALL_ARTISTS = gql`
           song_name
         }
       }
-      Total_albums
     }
   }
 `;
