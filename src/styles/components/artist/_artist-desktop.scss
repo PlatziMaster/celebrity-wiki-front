@@ -12,6 +12,10 @@
   grid-template-columns: 1fr;
   grid-gap: 10px;
 }
+.artist-info--albums {
+  text-align: start;
+  margin-bottom: 5px;
+}
 .album-container {
   max-height: 350px;
 }

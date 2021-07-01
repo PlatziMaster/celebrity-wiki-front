@@ -1,35 +1,73 @@
 .celebrity {
-  padding: 10px;
-  margin-top: 50px;
+  display: grid;
+  padding: 0 10%;
+  margin-top: 30px;
+}
+.celebrity-info {
+  grid-row: 2 / 3;
+}
+.celebrity-header {
   text-align: center;
 }
-.celebrity-image {
-  width: 100%;
+.celebrity-header__name {
+  max-width: 235px;
+  margin: 0 auto;
+}
+.celebrity-header h2 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+.celebrity-header p {
+  position: relative;
+  font-size: 1.4rem;
+  text-align: end;
+  transform: translateY(-10px);
+  color: $primary-color;
+}
+.celebrity-header figure {
+  width: 60%;
+  height: 140px;
+  margin: 0 auto;
+  margin-bottom: 30px;
   object-fit: cover;
 }
-.celebrity-desc > h2 {
-  font-size: 2.4rem;
-  margin-bottom: 0 20px;
-}
-.celebrity-image img {
+.celebrity-header figure img {
   width: 100%;
-  border-radius: 5px;
+  height: 100%;
+  border-radius: 15px;
 }
-.celebrity-desc ul {
+.celebrity-info {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.celebrity-info__list {
   display: grid;
   grid-template-columns: 50% 50%;
   list-style: none;
-  margin-bottom: 20px;
+  font-size: 1.4rem;
 }
-.celebrity-desc ul li {
-  font-size: 1.6rem;
-  margin-bottom: 5px;
+.celebrity-info__list li {
+  overflow: hidden;
 }
-.celebrity-desc--bio {
-  font-size: 1.6rem;
+.celebrity--bio {
+  font-size: 1.4rem;
 }
+
 @media (min-width: 768px) {
   .celebrity {
-    padding: 0 20%;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 40px;
+    border-radius: 20px;
+    border: 1px solid $primary-color;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  .celebrity-header figure {
+    height: 200px;
+  }
+  .celebrity-info__list {
+    grid-template-columns: repeat(3, 33%);
+    text-align: center;
   }
 }
