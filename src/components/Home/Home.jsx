@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 // Import components
-import Card from "../../components/Card/Card";
+import { Card } from "../../components/Card/Card";
 import { Spinner }  from "../UI/Spinner/Spinner";
 // Import custom hooks
 import { useGetCelebrities } from '../../customHooks/useGetCelebrities';
