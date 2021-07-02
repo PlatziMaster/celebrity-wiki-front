@@ -48,6 +48,12 @@
 .celebrity-info__list li:last-child {
   grid-column: 1 / 3;
 }
+.celebrity-info__list b {
+  display: block;
+}
+#artist--occupation {
+  display: inline-block;
+}
 .celebrity--bio {
   font-size: 2rem;
 }

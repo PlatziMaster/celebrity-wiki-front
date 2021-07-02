@@ -30,8 +30,8 @@ export const Template = ({ celebrity, loading }) => (
         </li>
         <li>
           <b>Ocuppation:</b>
-          {celebrity.occupation.map( occupation => (
-            <p>{occupation}</p>
+          {celebrity.occupation.map(occupation => (
+            <p id="artist--occupation">{occupation.replace('_', ' ')},&nbsp;</p>
           ))}
         </li>
       </ul>
