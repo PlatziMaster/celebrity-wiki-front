@@ -61,12 +61,13 @@ You can check out the figma design in the link below:
 
 [![Login](https://i.ibb.co/dPjCcsH/login.png "Login")](https://i.ibb.co/dPjCcsH/login.png "Login")
 
-[![Home Desktop](https://i.ibb.co/LQvTMnD/home-desktop.png "Home Desktop")](https://i.ibb.co/LQvTMnD/home-desktop.png "Home Desktop")
+[![Home Desktop](https://i.ibb.co/XV7RHry/home-desktop.png "Home Desktop")](https://i.ibb.co/XV7RHry/home-desktop.png "Home Desktop")
 
-[![Detail desktop](https://i.ibb.co/thqWH6V/detail-desktop.png "Detail desktop")](https://i.ibb.co/thqWH6V/detail-desktop.png "Detail desktop")
+[![Detail desktop](https://i.ibb.co/HVbQHyc/detail-desktop-art.png "Detail desktop")](https://i.ibb.co/HVbQHyc/detail-desktop-art.png "Detail desktop")
+[![Detail desktop](https://i.ibb.co/nLVMDrh/detail-desktop.png "Detail desktop")](https://i.ibb.co/nLVMDrh/detail-desktop.png "Detail desktop")
 
-[![Home Mobile](https://i.ibb.co/B6rT0td/home-mobile.png "Home Mobile")](https://i.ibb.co/B6rT0td/home-mobile.png "Home Mobile")
-[![Detail Mobile](https://i.ibb.co/PCVMTXL/detail-mobile.png "Detail Mobile")](https://i.ibb.co/PCVMTXL/detail-mobile.png "Detail Mobile")
+[![Home Mobile](https://i.ibb.co/YhjWxzY/home-mobile.png "Home Mobile")](https://i.ibb.co/YhjWxzY/home-mobile.png "Home Mobile")
+[![Detail Mobile](https://i.ibb.co/x8RsVdk/detail-mobile-artist.png "Detail Mobile")](https://i.ibb.co/x8RsVdk/detail-mobile-artist.png "Detail Mobile")
 
 ## 📰 Key Features
 - Login with facebook and google account
