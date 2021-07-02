@@ -30,18 +30,16 @@ export const Template = ({ celebrity, loading }) => (
         </li>
         <li>
           <b>Ocuppation:</b>
-          <p>{celebrity.occupation === undefined ? "no definido" : celebrity.occupation  }</p>
+          <p>{celebrity.occupation === undefined ? "no definido" : celebrity.occupation[0]  }</p>
         </li>
       </ul>
     </div>
     <div className="celebrity-header">
       <div className="celebrity-header__name">
         <h2>{celebrity.name}</h2>
-        <p>{celebrity.occupation}</p>
+        <p>{celebrity.occupation[0]}</p>
       </div>
-      <figure>
         <img src={celebrity.Image} alt="celebrity imae" />
-      </figure>
     </div>
     <p className="celebrity--bio">{celebrity.bio}</p>
   </div>
