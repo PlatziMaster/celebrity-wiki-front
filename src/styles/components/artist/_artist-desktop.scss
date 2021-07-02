@@ -6,7 +6,7 @@
     border-radius: 50px;
     margin-left: 78px;
     margin-right: 78px;
-    height: 80vh;
+    height: 620px;
     grid-template-columns: 30% 65%;
     gap: 50px;
   
@@ -17,6 +17,7 @@
         display: flex;
         flex-direction: column;
         overflow: auto;
+        height: 96%;
   
         &__title{
           font-size: 30px;
