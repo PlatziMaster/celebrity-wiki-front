@@ -7,8 +7,8 @@
     gap: 50px;
   
     &__sideAlbums{
-        border-top-left-radius: 50px;
-        border-bottom-left-radius: 50px;
+        border-top-left-radius: 46px;
+        border-bottom-left-radius: 46px;
         height: 96%;
   
     }
@@ -24,12 +24,21 @@
       }
   
       &__songs{
+        
         div{ 
           p{
             @include body;
             font-size: 19px;
           }
         }
+      }
+
+      &__sad{
+        grid-column: 3;
+      }
+      &__albums{
+        grid-row: 2;
+        grid-column: 2;
       }
     }
   
