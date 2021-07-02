@@ -26,11 +26,13 @@ export const Template = ({ celebrity, loading }) => (
         </li>
         <li>
           <b>Net worth:</b>
-          <p>{celebrity.net_worth === undefined ? "no definido" : celebrity.net_worth}</p>
+          <p>{ new Intl.NumberFormat().format(celebrity.net_worth)}</p>
         </li>
         <li>
           <b>Ocuppation:</b>
-          <p>{celebrity.occupation === undefined ? "no definido" : celebrity.occupation[0]  }</p>
+          {celebrity.occupation.map( occupation => (
+            <p>{occupation}</p>
+          ))}
         </li>
       </ul>
     </div>
