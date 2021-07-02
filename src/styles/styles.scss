@@ -1,0 +1,24 @@
+// Import bases and settings
+@import "./base/variables";
+@import "./base/base";
+
+// Import components
+@import "./components/celebrity/celebrity";
+@import './components/alert/alert';
+@import './components/spinner/spinner';
+@import './components/home/home';
+@import './components/login/login';
+@import './components/artist/artist';
+@import './components/slider/slider';
+@import './components/header/header';
+
+
+// Import desktop queries
+@media (min-width: 1024px) {
+  @import "./components/styles-desktop";
+}
+
+// Import tablet queries
+@media (min-width: 768px) and (max-width: 1023px) {
+  @import './components/styles-tablet';
+}

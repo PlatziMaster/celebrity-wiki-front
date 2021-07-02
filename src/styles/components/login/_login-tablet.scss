@@ -1,0 +1,16 @@
+.login {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../../../assets/images/login-background-tablet.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__container {
+    border: 2px solid $primary-color;
+  }
+}
+
+.logo--login {
+  background-image: url(../../../assets/images/logo-white.png);
+  width: 203px;
+  height: 78px;
+}
