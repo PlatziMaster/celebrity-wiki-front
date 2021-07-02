@@ -1,67 +1,8 @@
-@import "/src/styles/base/mixins";
-@import "/src/styles/base/variables";
+.nav {
+    padding: 20px 80px 0;
+}
 
-@media (min-width: 1024px) {
-
-    .header{
-        align-items: center;
-        display: grid;
-        grid-template-columns: 33% 33% 33%;
-        padding: 20px;
-
-        a {
-            display: flex;
-        }
-    }
-
-    .menu{
-        display: flex;
-        justify-content: flex-end;
-        &__icon{
-            display: none;
-        }
-
-        a {
-            @include body;
-            margin-left: 10px;
-            font-size: 19px;
-            color: $gray2;
-            text-decoration: none;
-        }
-
-        &__select {
-            @include body;
-            font-size: 19px;
-            color: $gray2;
-            height: 100%;
-            text-align-last:center;
-            background-color: $white;
-        }
-    }
-
-    .homeCard{
-        display: flex;
-    
-        &__info-title{
-            @include headline1;
-        }
-    
-        &__info-bio{
-            @include body;
-            font-size: 18px;
-        }
-    
-        &__img{
-            width: 550px;
-        }
-    }
-
-
-
-    .cards{
-       display: grid;
-       grid-template-columns: 25% 25% 25% 25%;
-       padding: 20px;
-       column-gap: 6px;
-    }
+.cards {
+    grid-template-columns: auto auto auto auto;
+    padding: 20px 80px;
 }
