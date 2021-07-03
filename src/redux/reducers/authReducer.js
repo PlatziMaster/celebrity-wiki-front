@@ -105,7 +105,7 @@ export const authReducer = (state = initialState, action) => {
       // Chesk if the facebook response has the access token
       if (accessTokenFacebook) {
         // Set token in local storage
-        window.localStorage.setItem('People-News-Token', accessTokenFacebook);
+        window.localStorage.setItem('People-News-Token', `Bearer ${accessTokenFacebook}`);
         
         /**
          * @returns {object} - Set success request true and set new token
