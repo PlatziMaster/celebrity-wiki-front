@@ -39,6 +39,7 @@ export const Template = ({ celebrity, loading }) => (
     <div className="celebrity-header">
       <div className="celebrity-header__name">
         <h2>{celebrity.name}</h2>
+        {/* CR: Use [0] is danger you could use ? */}
         <p>{celebrity.occupation[0]}</p>
       </div>
         <img src={celebrity.Image} alt="celebrity imae" />

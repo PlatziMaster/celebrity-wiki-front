@@ -18,6 +18,7 @@ const Component = ({ celebrities, setFilterCelebrities }) => {
    * @param {string} newFilterWord
    * Set new filter word and filter all celebrities that match with the filter word.
    */
+  // CR: Filter not will work with accents
   const filterCelebrities = (newFilterWord) => {
     setFilterWord(newFilterWord);
     setFilterCelebrities(celebrities.filter(celebrity => {

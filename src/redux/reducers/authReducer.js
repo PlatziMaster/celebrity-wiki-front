@@ -48,6 +48,7 @@ export const authReducer = (state = initialState, action) => {
       const { token: tokenLogin } = action.result;
 
       // Set token in local storage
+      // CR: It's bad practice have secondary effects inside reducer
       window.localStorage.setItem('People-News-Token', `Bearer ${tokenLogin}`);
 
       /**
@@ -76,6 +77,7 @@ export const authReducer = (state = initialState, action) => {
       const { tokenId: tokenIdGoogle  } = action.payload;
 
       // Set token in local storage
+      // CR: It's bad practice have secondary effects inside reducer
       window.localStorage.setItem('People-News-Token', `Bearer ${tokenIdGoogle}`);
 
       /**
@@ -103,6 +105,7 @@ export const authReducer = (state = initialState, action) => {
       const { accessToken: accessTokenFacebook } = action.payload;
 
       // Chesk if the facebook response has the access token
+      // CR: It's bad practice have secondary effects inside reducer
       if (accessTokenFacebook) {
         // Set token in local storage
         window.localStorage.setItem('People-News-Token', `Bearer ${accessTokenFacebook}`);

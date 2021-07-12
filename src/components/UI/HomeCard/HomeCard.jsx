@@ -11,6 +11,7 @@ export const HomeCard = ({ celebrity }) => (
                 <p>{celebrity.bio}</p>
                 <p><b>Age: </b>{celebrity.age}</p>
                 <p><b>Occupation: </b> 
+                {/* CR: celebrity.occupation.join(',') */}
                 {
                     celebrity.occupation.map(occupation => (
                         occupation + ", "
